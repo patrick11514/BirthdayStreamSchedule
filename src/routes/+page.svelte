@@ -111,15 +111,19 @@
 	overflow-y: hidden;`}
 >
     {#each realSchedule as sched}
-        <div class="my-2 p-2 rounded-lg bg-gray-500 flex flex-col font-bold text-lg" style={`height: ${(sched.toDate.getTime() - sched.fromDate.getTime()) / 17500}px;`}>
-            <h2 class="mt-0">{sched.from}</h2>
-            {#if sched.people}
-                <h2 class="mt-auto mb-0 text-xl">{sched.name}</h2>
-                <h2 class="mb-auto mt-0 text-xl">{sched.people.join(', ')}</h2>
-            {:else}
-                <h2 class="my-auto text-xl">{sched.name}</h2>
-            {/if}
-            <h2 class="mb-0">{sched.to}</h2>
+        <div class="my-2 p-2 rounded-lg bg-[#1e315a] flex flex-row font-bold text-lg" style={`height: ${(sched.toDate.getTime() - sched.fromDate.getTime()) / 17500}px;`}>
+            <div class="flex flex-col">
+                <h2 class="mt-0">{sched.from}</h2>
+                <h2 class="mt-auto mb-0">{sched.to}</h2>
+            </div>
+            <div class="my-auto flex flex-col w-full">
+                {#if sched.people}
+                    <h2 class="text-center w-full border-b-2 border-b-white">{sched.name}</h2>
+                    <h2 class="mx-auto text-center">{sched.people.join(', ')}</h2>
+                {:else}
+                    <h2 class="text-center w-full">{sched.name}</h2>
+                {/if}
+            </div>
         </div>
     {/each}
 </div>

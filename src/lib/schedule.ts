@@ -11,19 +11,29 @@ export default [
         to: '17:30'
     },
     {
-        name: 'Minecraft',
-        people: ['Patrik', 'Lukáš', 'Ondra'],
+        name: 'Pičo Park',
         from: '17:30',
-        to: '19:00'
+        to: '18:00'
+    },
+    {
+        name: 'Minecraft',
+        from: '18:00',
+        to: '18:30'
+    },
+    {
+        name: 'The Settlers II: 10th Anniversary, OpenTTD',
+        people: ['Kuba', 'Petr', 'Pavel', 'Patrik', 'Lukáš', 'Ondra', 'Honza', 'Martin', 'Matěj'],
+        from: '18:30',
+        to: '20:00'
     },
     {
         name: 'Pico Park',
         people: ['Honza', 'Martin', 'Matěj'],
-        from: '19:00',
+        from: '20:00',
         to: '22:00'
     },
     {
-        name: 'League of Legends',
+        name: 'Factorio',
         people: ['Kuba', 'Petr', 'Pavel', 'Patrik', 'Lukáš', 'Ondra', 'Honza', 'Martin', 'Matěj'],
         from: '22:00',
         to: '01:00'
