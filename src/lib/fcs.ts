@@ -72,7 +72,7 @@ start.setHours(15) // 15
 start.setMinutes(0) // :00
 start.setSeconds(0) // :00
 start.setMilliseconds(0) // :000
-start.setDate(2) // 2nd
+start.setDate(30) // 30th
 start.setMonth(4 - 1) // April
 /**
  * CHANGE THIS TO THE TIME YOU WANT THE SCHEDULE TO START

@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { getRealSchedule, getCurrentIndex, start } from '$lib/fcs'
+    import { getCurrentIndex, getRealSchedule, start } from '$lib/fcs'
     import schedule from '$lib/schedule'
     import { onMount } from 'svelte'
 
@@ -49,9 +49,13 @@
 >
     {#each realSchedule as sched}
         <div class="my-2 p-2 rounded-lg bg-[#1e315a] flex flex-row font-bold text-lg" style={`height: ${(sched.toDate.getTime() - sched.fromDate.getTime()) / 17500}px;`}>
-            <div class="flex flex-col">
-                <h2 class="mt-0">{sched.from}</h2>
-                <h2 class="mt-auto mb-0">{sched.to}</h2>
+            <div class="flex flex-col w-max">
+                {#if sched.toDate.getTime() - sched.fromDate.getTime() < 20 * 60 * 1000}
+                    <h2 class="my-auto w-max">{sched.from} - {sched.to}</h2>
+                {:else}
+                    <h2 class="mt-0">{sched.from}</h2>
+                    <h2 class="mt-auto mb-0">{sched.to}</h2>
+                {/if}
             </div>
             <div class="my-auto flex flex-col w-full">
                 {#if sched.people}
