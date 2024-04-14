@@ -61,6 +61,40 @@ export const r = router({
                 current: TableItem | undefined | null;
                 next: TableItem | undefined;
             }>;
+        }),
+        current: procedure.GET.query(async () => {
+            const now = Date.now();
+
+            let isBreak = false;
+
+            let currentIndex = TIMETABLE.findIndex((item) => {
+                return item.start <= now && item.end >= now;
+            });
+
+            if (currentIndex == -1) {
+                //check if in break
+                for (const _index in TIMETABLE) {
+                    const index = Number(_index);
+                    const item = TIMETABLE[index];
+
+                    if (index == TIMETABLE.length - 1) {
+                        break;
+                    }
+
+                    const nextItem = TIMETABLE[index + 1];
+
+                    if (item.end <= now && nextItem.start >= now) {
+                        currentIndex = index;
+                        isBreak = true;
+                        break;
+                    }
+                }
+            }
+
+            return {
+                status: true,
+                data: isBreak ? null : TIMETABLE[currentIndex]
+            } satisfies ResponseWithData<TableItem | null | undefined>;
         })
     }
 });
