@@ -1,20 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
         <link rel="icon" href="%sveltekit.assets%/favicon.png" />
-        <meta name="viewport" content="width=device-width" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap" rel="stylesheet" />
-
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         %sveltekit.head%
     </head>
-    <body class="min-w-screen min-h-screen overflow-hidden transition-all bg-transparent font-roboto text-white" data-sveltekit-preload-data="hover">
-        <div
-            class="w-screen h-screen bg-[#669bbc] overflow-y-hidden rounded-xl p-4 border-2 border-[#669bbc] after:bg-[#669bbc] after:h-0.5 after:bottom-0 after:left-3 after:w-99 after:absolute before:bg-[#669bbc] before:h-0.5 before:top-0 before:left-3 before:w-99 before:absolute before:z-10"
-        >
-            %sveltekit.body%
-        </div>
+    <body data-sveltekit-preload-data="hover">
+        <div style="display: contents">%sveltekit.body%</div>
     </body>
 </html>
