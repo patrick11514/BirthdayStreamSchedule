@@ -95,6 +95,12 @@ export const r = router({
                 status: true,
                 data: isBreak ? null : TIMETABLE[currentIndex]
             } satisfies ResponseWithData<TableItem | null | undefined>;
+        }),
+        start: procedure.GET.query(async () => {
+            return {
+                status: true,
+                data: startDay.getTime()
+            } satisfies ResponseWithData<number>;
         })
     }
 });

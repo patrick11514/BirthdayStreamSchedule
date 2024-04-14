@@ -24,15 +24,15 @@
 </script>
 
 <section class="flex flex-1 flex-col items-center justify-center gap-8">
-    <h2 class="mx-auto text-center font-ubuntu text-3xl font-semibold">Vítej na rozvrhu mého 24h narozeninového streamu</h2>
+    <h2 class="mx-auto text-center font-ubuntu text-3xl font-semibold 2xl:text-5xl">Vítej na rozvrhu mého 24h narozeninového streamu</h2>
     <div class="flex flex-row flex-wrap items-center justify-center gap-8">
         {#each links as link}
             <a
                 href={link.link}
-                class="flex aspect-square max-w-[300px] flex-col items-center justify-center rounded-lg bg-secondary p-8 text-center transition-all duration-150 hover:scale-105"
+                class="flex aspect-square max-h-[300px] flex-col items-center justify-center rounded-lg bg-secondary p-8 text-center transition-all duration-150 hover:scale-105 lg:max-h-[350px]"
             >
-                <h3 class="mx-auto text-center font-ubuntu text-2xl font-bold">{link.name}</h3>
-                <p class="text-lg">{link.description}</p>
+                <h3 class="mx-auto text-center font-ubuntu text-2xl font-bold 2xl:text-3xl">{link.name}</h3>
+                <p class="text-lg 2xl:text-2xl">{link.description}</p>
             </a>
         {/each}
     </div>

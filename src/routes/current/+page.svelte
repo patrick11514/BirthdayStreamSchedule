@@ -63,23 +63,23 @@
 </script>
 
 <section class="flex flex-1 flex-col items-center justify-center">
-    <h2 class="mx-auto text-center font-ubuntu text-3xl font-semibold">Aktuální událost</h2>
-    <a href="/" class="mb-8 text-center font-ubuntu text-xl font-semibold text-primary">Zpátky na hlavní stránku</a>
+    <h2 class="mx-auto text-center font-ubuntu text-3xl font-semibold 2xl:text-5xl">Aktuální událost</h2>
+    <a href="/" class="mb-8 text-center font-ubuntu text-xl font-semibold text-primary 2xl:text-3xl">Zpátky na hlavní stránku</a>
     <div class="flex flex-row flex-wrap items-center justify-center gap-8">
         <div class="transition-all duration-150 hover:scale-105">
-            <h2 class="text-xl font-semibold">Aktuální událost</h2>
+            <h2 class="text-xl font-semibold 2xl:text-3xl">Aktuální událost</h2>
             <div class="flex aspect-square w-[300px] flex-col items-center justify-center rounded-lg bg-secondary p-8 text-center">
                 {#if current === null}
-                    <h3 class="mx-auto text-center font-ubuntu text-2xl font-bold">Pauza</h3>
-                    <p class="text-lg">Aktuálně probíhá pauza</p>
+                    <h3 class="mx-auto text-center font-ubuntu text-2xl font-bold 2xl:text-4xl">Pauza</h3>
+                    <p class="text-lg 2xl:text-2xl">Aktuálně probíhá pauza</p>
                 {:else if current === undefined}
-                    <h3 class="mx-auto text-center font-ubuntu text-2xl font-bold">Nic</h3>
-                    <p class="text-lg">Aktuálně neprobíhá žádná událost</p>
+                    <h3 class="mx-auto text-center font-ubuntu text-2xl font-bold 2xl:text-4xl">Nic</h3>
+                    <p class="text-lg 2xl:text-2xl">Aktuálně neprobíhá žádná událost</p>
                 {:else}
-                    <h3 class="mx-auto text-center font-ubuntu text-2xl font-bold">{current.name}</h3>
-                    <p class="text-lg">{current.description}</p>
-                    <p class="text-lg">{current.hosts.join(', ')}</p>
-                    <p class="text-lg">
+                    <h3 class="mx-auto text-center font-ubuntu text-2xl font-bold 2xl:text-4xl">{current.name}</h3>
+                    <p class="text-lg 2xl:text-2xl">{current.description}</p>
+                    <p class="text-l 2xl:text-2xl">{current.hosts.join(', ')}</p>
+                    <p class="text-lg 2xl:text-2xl">
                         Zbývá: {#if currentTimeLeft > -1}
                             {millsToHHMMSS(currentTimeLeft)}
                         {:else}

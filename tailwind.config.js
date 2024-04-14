@@ -10,12 +10,18 @@ export default {
                 secondary: '#291f7b',
                 accent: '#6d37cd'
             },
-
             fontFamily: {
                 ubuntu: ['Ubuntu', 'sans-serif'],
                 poppins: ['Poppins', 'sans-serif'],
                 roboto: ['Roboto', 'sans-serif'],
                 inter: ['Inter', 'sans-serif']
+            },
+            inset: {
+                middle: 'calc(50% - 1px)',
+                main: 'calc(50% - 102px)'
+            },
+            maxHeight: {
+                timeline: 'calc(100vh - 32px)'
             }
         }
     },

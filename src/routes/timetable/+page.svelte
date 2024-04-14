@@ -28,10 +28,10 @@
 </script>
 
 <section class="flex flex-1 flex-col items-center justify-center">
-    <h2 class="mx-auto text-center font-ubuntu text-3xl font-semibold">Zde máš tabulku obsahující kompletní rozvrh</h2>
-    <a href="/" class="mb-8 text-center font-ubuntu text-xl font-semibold text-primary">Zpátky na hlavní stránku</a>
+    <h2 class="mx-auto text-center font-ubuntu text-3xl font-semibold xl:text-5xl">Zde máš tabulku obsahující kompletní rozvrh</h2>
+    <a href="/" class="mb-8 text-center font-ubuntu text-xl font-semibold text-primary 2xl:text-3xl">Zpátky na hlavní stránku</a>
     {#if timetable !== undefined}
-        <table class="border-collapse border-2 border-white">
+        <table class="border-collapse border-2 border-white 2xl:text-2xl">
             <thead>
                 <tr>
                     <th class="border-2 border-white p-1">Od</th>

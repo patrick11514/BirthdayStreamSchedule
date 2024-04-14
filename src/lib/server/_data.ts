@@ -9,6 +9,7 @@ type _TimeTable = {
 export type TableItem = {
     name: string;
     description: string;
+    duration: number;
     start: number;
     end: number;
     hosts: string[];
@@ -16,11 +17,15 @@ export type TableItem = {
 
 export type TimeTable = TableItem[];
 
+/* SET CORRECT TIME BEFORE START */
 export const startDay = new Date();
-startDay.setHours(14);
-startDay.setMinutes(51);
+startDay.setHours(19);
+startDay.setMinutes(0);
 startDay.setSeconds(0);
 startDay.setMilliseconds(0);
+startDay.setDate(1);
+startDay.setMonth(5 - 1);
+startDay.setFullYear(2024);
 
 const _break = 10; //minutes
 
