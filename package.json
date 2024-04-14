@@ -36,7 +36,10 @@
     },
     "type": "module",
     "dependencies": {
+        "@patrick115/sveltekitapi": "^1.2.5",
+        "bootstrap-icons": "^1.11.3",
         "dotenv": "^16.4.5",
+        "sweetalert2": "^11.10.7",
         "zod": "^3.22.4"
     }
 }
