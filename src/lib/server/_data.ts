@@ -4,6 +4,7 @@ type _TimeTable = {
     //minutes
     duration: number;
     hosts: string[];
+    color?: `bg-${string}-${number}` | `bg-${string}`;
 }[];
 
 export type TableItem = {
@@ -13,18 +14,19 @@ export type TableItem = {
     start: number;
     end: number;
     hosts: string[];
+    color?: `bg-${string}-${number}` | `bg-${string}`;
 };
 
 export type TimeTable = TableItem[];
 
 /* SET CORRECT TIME BEFORE START */
 export const startDay = new Date();
-startDay.setHours(19);
+startDay.setHours(21);
 startDay.setMinutes(0);
 startDay.setSeconds(0);
 startDay.setMilliseconds(0);
-startDay.setDate(1);
-startDay.setMonth(5 - 1);
+startDay.setDate(22);
+startDay.setMonth(3);
 startDay.setFullYear(2024);
 
 const _break = 10; //minutes
@@ -34,7 +36,8 @@ const _TIMETABLE = [
         name: 'Úvod',
         description: 'Úvod streamu, pokec',
         duration: 20,
-        hosts: []
+        hosts: [],
+        color: 'bg-blue-600'
     },
     {
         name: 'Minecraft',
