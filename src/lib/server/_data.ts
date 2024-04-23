@@ -21,11 +21,11 @@ export type TimeTable = TableItem[];
 
 /* SET CORRECT TIME BEFORE START */
 export const startDay = new Date();
-startDay.setHours(21);
+startDay.setHours(19);
 startDay.setMinutes(0);
 startDay.setSeconds(0);
 startDay.setMilliseconds(0);
-startDay.setDate(22);
+startDay.setDate(23);
 startDay.setMonth(3);
 startDay.setFullYear(2024);
 
@@ -40,10 +40,18 @@ const _TIMETABLE = [
         color: 'bg-blue-600'
     },
     {
-        name: 'Minecraft',
-        description: 'Minecraft minihry',
-        duration: 60,
-        hosts: ['Karel', 'Pepa']
+        name: 'Couter Strike',
+        description: 'Prostě CSko :D',
+        duration: 120,
+        hosts: ['Vikikle', 'Bratranec'],
+        color: 'bg-orange-500'
+    },
+    {
+        name: 'Lethal company',
+        description: '',
+        duration: 120,
+        hosts: ['Vikikle', 'Ondra'],
+        color: 'bg-red-600'
     }
 ] satisfies _TimeTable;
 
