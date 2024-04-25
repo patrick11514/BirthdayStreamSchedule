@@ -61,9 +61,16 @@ const _TIMETABLE = [
         color: 'bg-red-600'
     },
     {
+        name: 'The Settlers II: 10th anniversary',
+        description: 'Hra z dětství s taťkou',
+        duration: 110,
+        hosts: ['Taťka'],
+        color: 'bg-lime-600'
+    },
+    {
         name: 'Life is strange 2',
         description: 'Pokračování Life is strange',
-        duration: 470,
+        duration: 350,
         hosts: [],
         color: 'bg-green-600'
     },
