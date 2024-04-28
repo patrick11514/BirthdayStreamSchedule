@@ -31,31 +31,33 @@
     <h2 class="mx-auto text-center font-ubuntu text-3xl font-semibold xl:text-5xl">Zde máš tabulku obsahující kompletní rozvrh</h2>
     <a href="/" class="mb-8 text-center font-ubuntu text-xl font-semibold text-primary 2xl:text-3xl">Zpátky na hlavní stránku</a>
     {#if timetable !== undefined}
-        <table class="border-collapse border-2 border-white 2xl:text-2xl">
-            <thead>
-                <tr>
-                    <th class="border-2 border-white p-1">Od</th>
-                    <th class="border-2 border-white p-1">Do</th>
-                    <th class="border-2 border-white p-1">Název</th>
-                    <th class="border-2 border-white p-1">Popisek</th>
-                    <th class="border-2 border-white p-1">Hosté</th>
-                </tr>
-            </thead>
-            <tbody>
-                {#each timetable as item}
+        <div class="max-w-content block overflow-x-auto">
+            <table class="w-full border-collapse border-2 border-white 2xl:text-2xl">
+                <thead>
                     <tr>
-                        <td class="border-2 border-white p-1">{formatDate(item.start)}</td>
-                        <td class="border-2 border-white p-1">{formatDate(item.end)}</td>
-                        <td class="border-2 border-white p-1">{item.name}</td>
-                        <td class="border-2 border-white p-1">{item.description}</td>
-                        {#if item.hosts.length == 0}
-                            <td class="text-center"><Icon class="text-2xl text-red-600" name="bi-x" /></td>
-                        {:else}
-                            <td class="border-2 border-white p-1">{item.hosts.join(', ')}</td>
-                        {/if}
+                        <th class="border-2 border-white p-1">Od</th>
+                        <th class="border-2 border-white p-1">Do</th>
+                        <th class="border-2 border-white p-1">Název</th>
+                        <th class="border-2 border-white p-1">Popisek</th>
+                        <th class="border-2 border-white p-1">Hosté</th>
                     </tr>
-                {/each}
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    {#each timetable as item}
+                        <tr>
+                            <td class="border-2 border-white p-1">{formatDate(item.start)}</td>
+                            <td class="border-2 border-white p-1">{formatDate(item.end)}</td>
+                            <td class="border-2 border-white p-1">{item.name}</td>
+                            <td class="border-2 border-white p-1">{item.description}</td>
+                            {#if item.hosts.length == 0}
+                                <td class="text-center"><Icon class="text-2xl text-red-600" name="bi-x" /></td>
+                            {:else}
+                                <td class="border-2 border-white p-1">{item.hosts.join(', ')}</td>
+                            {/if}
+                        </tr>
+                    {/each}
+                </tbody>
+            </table>
+        </div>
     {/if}
 </section>

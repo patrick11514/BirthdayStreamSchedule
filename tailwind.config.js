@@ -22,6 +22,9 @@ export default {
             },
             maxHeight: {
                 timeline: 'calc(100vh - 32px)'
+            },
+            maxWidth: {
+                content: 'calc(100vw - 2rem)'
             }
         }
     },
